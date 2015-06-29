@@ -60,9 +60,9 @@ def main():
     ip = ip_response.readline()
     
     if IP(ip).version() == 4:
-        record_type = 0     # A record
+        record_type = 'A'     # A record
     elif IP(ip).version() == 6:
-        record_type = 1     # AAAA record
+        record_type = 'AAAA'     # AAAA record
     
     try:
         global dns

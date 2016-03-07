@@ -55,7 +55,8 @@ def main():
     
     domain = '.'.join(args.fqdn.split('.')[-args.places:])
     host = '.'.join(args.fqdn.split('.')[:-args.places])
-
+    if host == '':
+        host = None
     ip_response = urlopen(ip_service)
     ip = ip_response.readline()
     
